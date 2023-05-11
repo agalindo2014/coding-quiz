@@ -1,77 +1,41 @@
-/* Set global styles */
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
+.container {
+    margin: auto;
+    width: 80%;
+    text-align: center;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
   }
   
   h1 {
-    text-align: center;
+    font-size: 48px;
+    margin: 50px 0;
   }
   
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #eee;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  h2 {
+    font-size: 36px;
+    margin-top: 50px;
   }
   
-  button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Hide the quiz element initially */
   #quiz {
     display: none;
   }
   
-  #options {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #options button {
-    align-self: stretch;
-  }
-  
-  #timer {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: right;
-  }
-  
-  #score {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  #high-scores {
-    text-align: center;
-    font-size: 16px;
+  #choices {
+    list-style: none;
+    padding: 0;
     margin-top: 20px;
-    cursor: pointer;
-    color: blue;
   }
   
-  #high-scores:hover {
-    text-decoration: underline;
+  #results,
+  #high-scores {
+    display: none;
+    margin-top: 50px;
+  }
+  
+  #initials {
+    text-transform: uppercase;
+  }
+  
+  .hide {
+    display: none;
   }
   

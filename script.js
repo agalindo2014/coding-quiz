@@ -34,6 +34,7 @@ const quizQuestions = [
   const scoreElement = document.getElementById("score");
   const highScoresElement = document.getElementById("high-scores");
   
+  
   // Define event listener for start button
   startButton.addEventListener("click", startQuiz);
   
