@@ -34,7 +34,6 @@ const quizQuestions = [
   const scoreElement = document.getElementById("score");
   const highScoresElement = document.getElementById("high-scores");
   
-  
   // Define event listener for start button
   startButton.addEventListener("click", startQuiz);
   
@@ -43,9 +42,6 @@ const quizQuestions = [
   
   // Define event listener for high scores
   highScoresElement.addEventListener("click", showHighScores);
-  
-  // Define timer interval variable
-  let timerInterval;
   
   function startQuiz() {
     // Hide the start button and show the quiz element
@@ -58,9 +54,6 @@ const quizQuestions = [
   
     // Display the first question
     displayQuestion();
-  
-    // Start the timer
-    timerInterval = setInterval(updateTimer, 1000);
   }
   
   function displayQuestion() {
@@ -81,7 +74,8 @@ const quizQuestions = [
       optionsElement.appendChild(optionElement);
     });
   
-    // Update the score display
+    // Update the timer and score display
+    updateTimer();
     updateScore();
   }
   
@@ -111,5 +105,7 @@ const quizQuestions = [
     }
   }
   
-  function endQuiz()
+  function endQuiz() {
+    // Stop the timer
+    clearInterval(timerInterval);
   
