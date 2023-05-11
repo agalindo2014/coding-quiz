@@ -1,3 +1,23 @@
+// Define the quiz questions as an array of objects
+const quizQuestions = [
+  {
+    question: "Which of these is a programming language?",
+    options: ["bite", "itch", "gnaw", "scratch"],
+    answerIndex: 4
+  },
+  {
+    question: "People who write computer code are?",
+    options: ["professors", "instructors", "programmers", "manufacturers"],
+    answerIndex: 3
+  },
+  {
+    question: "Which of these is not a programming language?",
+    options: ["Python", "Java", "Banana", "Ruby"],
+    answerIndex: 3
+  },
+  // Add more questions here
+];
+
 // Define the quiz state
 let quizState = {
   currentQuestionIndex: 0,
@@ -60,14 +80,15 @@ function displayQuestion() {
   });
 
   // Update the score display
-  updateScore();
-}
+  function updateScore() {
+    scoreElement.textContent = `Score: ${quizState.score}`;
+  }
 
 function handleOptionClick(event) {
   if (event.target.matches("button")) {
     const selectedOptionIndex = parseInt(event.target.getAttribute("data-index"));
     const currentQuestion = quizQuestions[quizState.currentQuestionIndex];
-  
+  }
 
     if (selectedOptionIndex === currentQuestion.answerIndex) {
       // Correct answer - increment score
@@ -87,6 +108,4 @@ function handleOptionClick(event) {
     } else {
       endQuiz();
     }
-  }
-  
 }
