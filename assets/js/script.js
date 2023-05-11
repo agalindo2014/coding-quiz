@@ -108,4 +108,4 @@ const quizQuestions = [
   function endQuiz() {
     // Stop the timer
     clearInterval(timerInterval);
-  
+  }
