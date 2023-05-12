@@ -30,6 +30,3 @@ Timer duration: Edit the timerDuration variable in the script.js file to change 
 Styling: Edit the style.css file to change the styling of the quiz.
 Authors
 April Galindo
-Acknowledgments
-The JavaScript quiz was inspired by FreeCodeCamp's coding challenges.
-The starter code for this quiz was adapted from Traversy Media's "Build a Quiz App with HTML, CSS, and JavaScript" tutorial.
